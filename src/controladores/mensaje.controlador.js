@@ -31,7 +31,6 @@ function obtenerMensajesXIdUsuario(req, res){
     }
     else{
       if(mensajesResp != null){
-        console.log(mensajesResp);
         res.status(200).send({mensajesResp});
       }
       else {
