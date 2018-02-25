@@ -31,6 +31,7 @@ function obtenerMensajesXIdUsuario(req, res){
     }
     else{
       if(mensajesResp != null){
+        console.log(mensajesResp);
         res.status(200).send({mensajesResp});
       }
       else {
@@ -55,7 +56,7 @@ function enviarMensaje(req, res){
       res.status(500).send({mensaje: "Error al enviar el mensaje :("});
     }
     else{
-      res.status(200).send(mensajeResp);
+      res.status(200).send({mensajeOk: "Se envio el mensaje"});
     }
   });
 }

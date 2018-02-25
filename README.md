@@ -66,3 +66,118 @@ La API se ejecutara el http://(IP local):1234/api
     }
 
 
+**Obtener libros por título**
+----
+  Retorna un array de los libros disponibles, según el parámetro de entrada, búsqueda por titulo de libro
+
+* **URL**
+
+  /obtener-libros-titulo/:titulo
+  
+* **Method:**
+
+  `GET`
+  
+*  **URL Params (requerido)**
+
+    Titulo: string
+
+* **Boby Params**
+
+  `NONE
+
+* **Respuesta:**
+
+  * **Code:** 200
+    **Content:** 
+    ```
+    [ 
+{ _id: 5a9137d71d6b6372201523bc,
+    	idUsuario: '5a8b9aa38365314d7083af2a',
+    titulo: '100 libros',
+    autor: 'nn 1092',
+    descripcion: 'el libro de misterios del mundo, El código JSX parece HTML pero realmente es una',
+    urlImagen: 'https://letransfusion.files.wordpress.com/2009/06/libro_viejo.jpg',
+    __v: 0 },
+  { _id: 5a8e31bdbbf21e2d148cd65c,
+    idUsuario: '5a8b9aa38365314d7083af2a',
+    titulo: 'el libro',
+    autor: 'el autor',
+    descripcion: 'El código JSX parece HTML pero realmente es una mezcla de JavaScript y HTML. El',
+    urlImagen: 'http://conceptodefinicion.de/wp-content/uploads/2015/01/libro.jpg',
+    __v: 0 }
+]
+
+
+**Obtener libro **
+----
+  Retorna un datos de un libro
+
+* **URL**
+
+ /obtener-libro/:id
+  
+* **Method:**
+
+  `GET`
+  
+*  **URL Params (requerido)**
+
+    id: string
+
+* **Boby Params**
+
+  `NONE
+
+* **Respuesta:**
+
+  * **Code:** 200
+    **Content:** 
+    ```
+[ { _id: 5a8e31bdbbf21e2d148cd65c,
+    idUsuario: '5a8b9aa38365314d7083af2a',
+    titulo: 'el libro',
+    autor: 'el autor',
+    descripcion: 'El código JSX parece HTML pero realmente es una mezcla de JavaScript y HTML,
+    urlImagen: 'http://conceptodefinicion.de/wp-content/uploads/2015/01/libro.jpg',
+    __v: 0 } ]
+
+
+**Mensajes por usuario **
+----
+  Retorna los mensajes de un usuario
+
+* **URL**
+
+ /mensajes-Usuario/:id  
+* **Method:**
+
+  `GET`
+  
+*  **URL Params (requerido)**
+
+    id: string
+
+* **Boby Params**
+
+  `NONE
+
+* **Respuesta:**
+
+  * **Code:** 200
+    **Content:** 
+    ```
+[ { _id: 5a921a59c909811188c60ac5,
+    idUsuario: '5a8b9aa38365314d7083af2a',
+    idUsuarioEnvia: '5a8b9aa38365314d7083af2a',
+    mensaje: 'El usuario usuario01 te envío un mensaje ... \n\nHola, me interesa tu libro, me gustaría hacer un intercambio, escribirme :) !!!!',
+    tipo: 'Solicitud',
+    __v: 0 },
+  { _id: 5a921b1b3549bf432c99afbc,
+    idUsuario: '5a8b9aa38365314d7083af2a',
+    idUsuarioEnvia: '5a8b9aa38365314d7083af2a',
+    mensaje: 'El usuario usuario01 te envío un mensaje ... \n\nHola, me interesa tu libro, me gustaría hacer un intercambio, escribirme :) !!!!',
+    tipo: 'Solicitud',
+    __v: 0 } ]
+
+---

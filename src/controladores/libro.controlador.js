@@ -50,6 +50,7 @@ function obtenerLibro(req, res){
     }
     else{
       if(libroResp != null){
+        console.log(libroResp);
         res.status(200).send({libroResp});
       }
       else {
