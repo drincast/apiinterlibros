@@ -28,3 +28,41 @@ Para levantar la API ejecutar el siguiente comando `npm start`
 
 ---
 
+La api se conecta a una base de datos alojada en https://mlab.com/, la configuración de la conexión se encuentra en el archivo index.js dentro de la carpeta raíz del proyecto
+const basedatos = process.env.MONGO_URL || "mongodb://interlibros:interlibros123@ds041678.mlab.com:41678/interlibros";
+# Recursos
+La API se ejecutara el http://(IP local):1234/api
+
+**Crear Usuario**
+----
+  Retorna el token, id de usuario, y nombre de usuario
+
+* **URL**
+
+  /login
+  
+* **Method:**
+
+  `POST`
+  
+*  **URL Params (requerido)**
+
+    None
+
+* **Boby Params**
+
+  `usuario=[string]`
+  `password=[string]`
+
+* **Respuesta:**
+
+  * **Code:** 200
+    **Content:** 
+    ```
+    {
+        token:	"ASDJKL543890RWLKNJFSD9789080SJLKFSD9890"
+        idUsuario:	"rewio5479043jjfljfl"
+        usuario:	"usuario01"
+    }
+
+
