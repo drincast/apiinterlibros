@@ -1,7 +1,8 @@
 # API REST APIInterLibros (DEMO)
 
-Documentación de la API REST Para la aplicación intercambio de libros (InterLibro), aplicación demo para pruebas de semillero de Almundo.
-* **espress:** Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).
+Documentación de la API REST Para la aplicación intercambio de libros (InterLibro), aplicación demo.
+
+* **express:** Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).
 * **body-parser:** Analizar el body de las solicitudes entrantes a la api
 * **jwt-simple:** para el manejo de autenticación basada por token
 * **momento:** para el el tiempo que perdurara el token de autorización
@@ -16,7 +17,7 @@ Instalar el entorno NodeJS
 ---
 
 ### **Instalación**
-Clonar el repositorio 
+Clonar el repositorio
 * **HTTPS** `https://github.com/drincast/apiinterlibros.git`
 
 Después de clonar el proyecto, entrar a la carpeta raíz y ejecutar el comando `npm install`.
@@ -40,11 +41,11 @@ La API se ejecutara el http://(IP local):1234/api
 * **URL**
 
   /login
-  
+
 * **Method:**
 
   `POST`
-  
+
 *  **URL Params (requerido)**
 
     None
@@ -57,7 +58,7 @@ La API se ejecutara el http://(IP local):1234/api
 * **Respuesta:**
 
   * **Code:** 200
-    **Content:** 
+    **Content:**
     ```
     {
         token:	"ASDJKL543890RWLKNJFSD9789080SJLKFSD9890"
@@ -73,11 +74,11 @@ La API se ejecutara el http://(IP local):1234/api
 * **URL**
 
   /obtener-libros-titulo/:titulo
-  
+
 * **Method:**
 
   `GET`
-  
+
 *  **URL Params (requerido)**
 
     Titulo: string
@@ -89,9 +90,9 @@ La API se ejecutara el http://(IP local):1234/api
 * **Respuesta:**
 
   * **Code:** 200
-    **Content:** 
+    **Content:**
     ```
-    [ 
+    [
 { _id: 5a9137d71d6b6372201523bc,
     	idUsuario: '5a8b9aa38365314d7083af2a',
     titulo: '100 libros',
@@ -116,11 +117,11 @@ La API se ejecutara el http://(IP local):1234/api
 * **URL**
 
  /obtener-libro/:id
-  
+
 * **Method:**
 
   `GET`
-  
+
 *  **URL Params (requerido)**
 
     id: string
@@ -132,7 +133,7 @@ La API se ejecutara el http://(IP local):1234/api
 * **Respuesta:**
 
   * **Code:** 200
-    **Content:** 
+    **Content:**
     ```
 [ { _id: 5a8e31bdbbf21e2d148cd65c,
     idUsuario: '5a8b9aa38365314d7083af2a',
@@ -153,7 +154,7 @@ La API se ejecutara el http://(IP local):1234/api
 * **Method:**
 
   `GET`
-  
+
 *  **URL Params (requerido)**
 
     id: string
@@ -165,7 +166,7 @@ La API se ejecutara el http://(IP local):1234/api
 * **Respuesta:**
 
   * **Code:** 200
-    **Content:** 
+    **Content:**
     ```
 [ { _id: 5a921a59c909811188c60ac5,
     idUsuario: '5a8b9aa38365314d7083af2a',
